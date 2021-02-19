@@ -1,7 +1,7 @@
 import './App.css';
 import InlineStyle from './components/InlineStyle';
 import StyleSheets from './components/StyleSheets';
-
+import Form from './components/Form';
 // problem is if 'line 21' is used in any other component, it will be applied there as well
 import './appStyles.css'
 
@@ -13,15 +13,19 @@ function App() {
 
 
   return (
-    //<StyleSheets primary={false}/>
-    //<InlineStyle/>
+    /*
+    css styling
+    
+    <StyleSheets primary={false}/>
+    <InlineStyle/>
+    
     <div>
     
-    
-    <h1 className="error">Error (using basic css stylesheets)</h1>
-    
-    <h1 className={styles.success}>Success using css modules </h1>
+      <h1 className="error">Error (using basic css stylesheets)</h1>
+      <h1 className={styles.success}>Success using css modules </h1>
     </div>
+    */
+   <Form/>
   );
 }
 
