@@ -1,0 +1,95 @@
+            Lifecycle stages and their Methods (For class components only)
+
+->  Mounting (EX: LifecycleA.js)
+
+    lifecylcle methods belonging to this are called when an instance of component
+    is being created and inserted into dom
+
+    four methods (executed in order):
+        1.constructor(props)
+            -should be used to initialize state and bind event handlers (optional)
+            -super(props) should be called first
+            -DO NOT make ajax calls
+
+        2.static getDerivedStateFromProps(props,state)
+            -rarely used
+            -used when state of component depends on changes in props over time
+            -set state here from props (can't use 'this' keyword in static method)
+            -DO NOT make ajax calls
+
+        3.render()
+            -required
+            -read state and props and return jsx
+            -do not change state or make ajax calls
+            -children component lifecycle methods are also executed
+
+        4.componentDidMount()
+
+            -invoked once in whole life cycle of component
+            -invoked immediately after a component and all of its children components have been 
+                rendered to DOM
+            -perfect place to cause side effects
+            -Ex: load data using ajax calls or interact with DOM
+    
+    EX: LifecycleA.js & LifecycleB.js
+
+
+->  Updating (Ex: LifecycleC.js)
+
+    lifecylcle methods belonging to this are called when component is being re-rendered 
+    as a result of changes in it's prop and state
+
+    five methods (executed in order):
+        1.static getDerivedStateFromProps(props,state)
+
+            -method is called every time component is re-rendered
+
+        2.shouldComponentUpdate(nextProps,nextState)
+            -dictates whether component should re-render or not
+            -performance optimisation
+            -return value is boolean
+
+        3.render()
+
+            -returns jsx
+
+        4.getSnapshotBeforeUpdate(prevProps,prevState)
+
+            -called right before the changes in virtual DOM is refelected in DOM
+            -takes previous props and previous state
+            -capture some information from the DOM
+            -method will return null or value that is passed as third parameter to next method
+
+        5.componentDidUpdate(prevProps,prevState,snapshot)
+            -called after the render is finished in re-render cycles
+            -cause side effects
+            -make ajax calls (based on new values)
+        
+    Ex: LifecycleC.js
+
+
+->  Unmounting
+
+    lifecylcle methods belonging to this are called when component is being removed 
+    from the DOM
+
+    one method:
+        1.componentWillUnmount()
+
+            -invoked immediately before a component is unmounted or destroyed
+            -can be used to perform cleanup actions like
+             cancelling network requests, removing event handlers, cancelling subscriptions
+             and also invalidating timers 
+            -do not call setState (as component will never be rendered)
+
+
+->  Error handling
+
+    lifecylcle methods belonging to this are called when there is an error during
+    rendering, in a lifecycle method, or in the constructor of any child component
+
+    two methods:
+        1.static getDerivedStateFromError(error)
+        2.componetDidCatch(error,info)
+
+        will add later more on this

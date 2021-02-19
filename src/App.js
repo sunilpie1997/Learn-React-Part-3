@@ -8,24 +8,38 @@ import './appStyles.css'
 // css modules are imported this way.
 // it cannot be used in any other component as it can be used using variable 'styles'
 import styles from './appStyles.module.css'; 
+import LifecycleA from './components/LifecycleA';
+import LifecycleC from './components/LifecycleC';
 
 function App() {
 
 
   return (
     /*
-    css styling
+      css styling
     
-    <StyleSheets primary={false}/>
-    <InlineStyle/>
+      <StyleSheets primary={false}/>
+      <InlineStyle/>
     
-    <div>
+      <div>
     
-      <h1 className="error">Error (using basic css stylesheets)</h1>
-      <h1 className={styles.success}>Success using css modules </h1>
-    </div>
+        <h1 className="error">Error (using basic css stylesheets)</h1>
+        <h1 className={styles.success}>Success using css modules </h1>
+      </div>
     */
-   <Form/>
+    /*
+      form handling
+      <Form/>
+    */
+    /*
+      mounting stage lifecycle methods
+      <LifecycleA/>
+    */
+    /*
+      updating stage lifecycle methods
+    */
+    <LifecycleC/>
+
   );
 }
 
