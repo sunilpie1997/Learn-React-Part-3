@@ -2,3 +2,8 @@ Create Ref
 
 ->  we can access dom nodes directly
 ->  Ex: RefDemo.js
+
+-> we can add ref to a class component as well
+-> BUT KEEP IN MIND, IT IS FOR ONLY CLASS COMPONENTS
+-> Ex: FocusInput.js (parent) and Input.js (Child)
+-> In above, we will add ref to 'Input.js'

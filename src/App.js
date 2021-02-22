@@ -13,6 +13,7 @@ import LifecycleC from './components/LifecycleC';
 import Table from './components/Table';
 import ParentComp from './components/ParentComp';
 import RefDemo from './components/RefDemo';
+import FocusInput from './FocusInput';
 
 function App() {
 
@@ -56,8 +57,13 @@ function App() {
     <ParentComp/>
     */
     
-    /* create ref */
+    /* create refs
     <RefDemo/>
+    */
+
+    /* refs with class component */
+    <FocusInput/>
+
   );
 }
 
