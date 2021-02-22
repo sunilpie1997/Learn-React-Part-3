@@ -10,6 +10,7 @@ import './appStyles.css'
 import styles from './appStyles.module.css'; 
 import LifecycleA from './components/LifecycleA';
 import LifecycleC from './components/LifecycleC';
+import Table from './components/Table';
 
 function App() {
 
@@ -37,9 +38,13 @@ function App() {
     */
     /*
       updating stage lifecycle methods
-    */
+    
     <LifecycleC/>
-
+    */
+    
+    /* React fragments */
+    <Table/>
+    
   );
 }
 

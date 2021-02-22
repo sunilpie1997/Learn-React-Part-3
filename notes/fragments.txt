@@ -1,0 +1,10 @@
+        Fragment
+
+->  To group multiple elements in DOM without adding any extra parent element.
+    
+->  Ex: <React.Fragment> 
+            <h1>title</h1>
+            <p>para</p>
+        </React.Fragment>
+
+->  Ex: Table.js and Column.js -> where it can be useful
