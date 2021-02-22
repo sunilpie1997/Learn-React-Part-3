@@ -1,7 +1,7 @@
 
 EX: showing the difference ParentComp.js
 
-            Regular components                                              Pure components
+            Regular components                                              Pure components (For class Component)
 
 ->  A regular component does not implement                  ->  It implements shouldComponentUpdate() method
     shouldComponentUpdate() method. It returns                  with shallow state and props comparison
@@ -28,7 +28,7 @@ EX: showing the difference ParentComp.js
                                                                 to prevent unexpected behaviour
 
                                                             -> Never mutate the state. Always return new object that reflects new state
-                                                            
+
                                                             -> Ex:   PureComp.js
 
 

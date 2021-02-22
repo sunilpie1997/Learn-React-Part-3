@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import Memo from './Memo';
 import PureComp from './PureComp';
 import RegComp from './RegComp';
 
@@ -24,7 +25,7 @@ class ParentComp extends React.Component{
             <React.Fragment>
                 <h1>Parent component</h1>
                 <RegComp name={this.state.name}/>
-
+                <Memo name={this.state.name}/>
                 <PureComp name={this.state.name}/>
             </React.Fragment>
         );

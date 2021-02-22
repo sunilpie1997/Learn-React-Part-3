@@ -47,7 +47,11 @@ function App() {
     <Table/>
     */
 
-    /* pure components */
+    /* pure components 
+    <ParentComp/>
+    */
+
+    /* memo */
     <ParentComp/>
   );
 }

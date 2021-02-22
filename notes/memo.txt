@@ -1,0 +1,10 @@
+Memo (For functional component)
+
+->  PureComponent is for Class Component whereas React.memo() is for functional component.
+
+->   avoid re-render giving performance boost.
+
+->  usage: export default React.memo(<functional component>)
+
+->  React.memo() is a high order component, i.e it takes a component
+    and adds some functionalities an returns it.
