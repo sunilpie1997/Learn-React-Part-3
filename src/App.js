@@ -12,6 +12,7 @@ import LifecycleA from './components/LifecycleA';
 import LifecycleC from './components/LifecycleC';
 import Table from './components/Table';
 import ParentComp from './components/ParentComp';
+import RefDemo from './components/RefDemo';
 
 function App() {
 
@@ -51,8 +52,12 @@ function App() {
     <ParentComp/>
     */
 
-    /* memo */
+    /* memo
     <ParentComp/>
+    */
+    
+    /* create ref */
+    <RefDemo/>
   );
 }
 

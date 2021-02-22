@@ -7,4 +7,4 @@ Memo (For functional component)
 ->  usage: export default React.memo(<functional component>)
 
 ->  React.memo() is a high order component, i.e it takes a component
-    and adds some functionalities an returns it.
+    and adds some functionalities an returns it
