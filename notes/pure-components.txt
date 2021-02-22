@@ -23,7 +23,12 @@ EX: showing the difference ParentComp.js
                                                                 Beacuse if you don't do it, PureComponent will not re-render 
                                                                 as it will do shallow comparison based on reference
                                                                 and it will return true.
+                                                            
+                                                            -> It is a good idea to keeep all child components also Pure
+                                                                to prevent unexpected behaviour
 
+                                                            -> Never mutate the state. Always return new object that reflects new state
+                                                            
                                                             -> Ex:   PureComp.js
 
 
