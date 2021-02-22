@@ -1,0 +1,50 @@
+
+EX: showing the difference ParentComp.js
+
+            Regular components                                              Pure components
+
+->  A regular component does not implement                  ->  It implements shouldComponentUpdate() method
+    shouldComponentUpdate() method. It returns                  with shallow state and props comparison
+    true by default
+
+-> Ex: RegComp.js                                           ->  gives necessary performance boost as components 
+                                                                does not re-render when props and state remains same
+                                                            
+                                                            ->  NOTE: if parent component 'PureComponent' does not
+                                                                re-render, then all children will also not re-render.
+                                                            
+                                                            -> performance boost when state contains a list or array
+                                                                because they will not re-render if there is no change
+
+                                                            -> IMPORTANT: (DON'T MUTATE LIST)
+                                                                whenever dealing with a PureComponent with props 
+                                                                or state as list, make sure that you always return new
+                                                                list if you are making any change in list.
+                                                                Beacuse if you don't do it, PureComponent will not re-render 
+                                                                as it will do shallow comparison based on reference
+                                                                and it will return true.
+
+                                                            -> Ex:   PureComp.js
+
+
+
+                                Shallow comparison (SC)
+
+we will study shallow comparison based on primitve and complex types
+
+->  Primitive data type
+
+    a (SC) b returns true if the values are same as well as of same type
+    ex: 'sunil' (SC) 'sunil' returns true
+
+-> Complex types (array, dictionary, etc)
+
+    a (SC) b returns true if they both reference same object
+
+    ex:
+    a=[1,2,3]
+    b=[1,2,3]
+    c=a
+
+    a (SC) b returns false
+    c (SC) a returns true

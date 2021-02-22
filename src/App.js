@@ -11,6 +11,7 @@ import styles from './appStyles.module.css';
 import LifecycleA from './components/LifecycleA';
 import LifecycleC from './components/LifecycleC';
 import Table from './components/Table';
+import ParentComp from './components/ParentComp';
 
 function App() {
 
@@ -42,9 +43,12 @@ function App() {
     <LifecycleC/>
     */
     
-    /* React fragments */
+    /* React fragments 
     <Table/>
-    
+    */
+
+    /* pure components */
+    <ParentComp/>
   );
 }
 
