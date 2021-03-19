@@ -16,6 +16,8 @@ import RefDemo from './components/RefDemo';
 import FocusInput from './FocusInput';
 import ParentForwardRef from './components/ParentForwardRef';
 import Portal from './components/Portal';
+import Hero from './Hero';
+import ErrorBoundary from './components/ErrorBoundary';
 
 function App() {
 
@@ -71,9 +73,20 @@ function App() {
     <ParentForwardRef/>
     */
 
-    /* portal */
+    /* portal 
     <Portal/>
+    */
 
+    /* error boundary */
+    <>
+    <ErrorBoundary>
+      <Hero heroName="Batman"/>
+    </ErrorBoundary>
+    
+    <ErrorBoundary>
+      <Hero heroName="Joker"/>
+    </ErrorBoundary>
+    </>
   );
 }
 

@@ -1,0 +1,35 @@
+Error Boundary ex: Hero.js and ErrorBoundary.js
+
+
+->  IMPORTANT NOTE: all though you wrap your component in Error Boundary,
+    
+    React will always display error (intentionally) because React wants developers to 
+    
+    see all errors.
+
+    ALSO, errors are natched in contructor, lifecycle methods, render but NOT click Handlers
+
+
+->  a class component that implements on or both of lifecycle methods 
+
+    getDerivedStateFromError() or componentDidCatch()
+
+    becomes an Error Boundary
+
+
+->  The static method - getDerivedStateFromError() is used
+
+    to RENDER A FALLBACK UI AFTER AN ERROR IS THROWN.
+
+    The method - componentDidCatch() is used to log the error information
+
+
+->  Error Boundary catch javascript erors in the CHILD COMPONENT TREE BASED ON 
+    IT'S PLACEMENT
+
+
+->  the placement of error boundary also matters as it control s if the entire app
+    should have a fallback UI or only just the components CAUSING PROBLEM
+
+
+->  GRACEFULLY handles error in application code
