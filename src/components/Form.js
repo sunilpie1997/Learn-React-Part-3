@@ -30,6 +30,7 @@ class Form extends React.Component{
         //helps to prevent normal flow
         // submitted values will be stull there if we use it
         event.preventDefault();
+        //page will not be reloaded
     }
     render()
     {
