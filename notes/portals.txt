@@ -1,0 +1,14 @@
+Portals
+
+->  if we want to render outside outside of dom tree
+
+    for example:
+    
+        we render everything inside <div id="root">>/div>
+
+        what if we want to render outside this dom tree and still want our component
+
+        to be a part of react component hiearchy 
+
+
+-> can we useful in some cases when want it to be in seperate dom tree

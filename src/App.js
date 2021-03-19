@@ -15,6 +15,7 @@ import ParentComp from './components/ParentComp';
 import RefDemo from './components/RefDemo';
 import FocusInput from './FocusInput';
 import ParentForwardRef from './components/ParentForwardRef';
+import Portal from './components/Portal';
 
 function App() {
 
@@ -66,8 +67,12 @@ function App() {
     <FocusInput/>
     */
 
-    /* forwarding refs */
+    /* forwarding refs 
     <ParentForwardRef/>
+    */
+
+    /* portal */
+    <Portal/>
 
   );
 }
