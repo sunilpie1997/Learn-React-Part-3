@@ -10,11 +10,17 @@ class ErrorBoundary extends Component {
 
     }
 
-    static getDerivedStateFromError(error,info)
+    static getDerivedStateFromError(error)
     {
         return {
             hasError:true
         }
+    }
+
+    componentDidCatch(error,info)
+    {
+        console.log("error trace",error);
+        console.log(info);
     }
 
     render() {
