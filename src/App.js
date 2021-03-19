@@ -14,6 +14,7 @@ import Table from './components/Table';
 import ParentComp from './components/ParentComp';
 import RefDemo from './components/RefDemo';
 import FocusInput from './FocusInput';
+import ParentForwardRef from './components/ParentForwardRef';
 
 function App() {
 
@@ -61,8 +62,12 @@ function App() {
     <RefDemo/>
     */
 
-    /* refs with class component */
+    /* refs with class component 
     <FocusInput/>
+    */
+
+    /* forwarding refs */
+    <ParentForwardRef/>
 
   );
 }

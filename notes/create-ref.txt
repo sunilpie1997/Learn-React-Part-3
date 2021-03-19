@@ -7,3 +7,11 @@ Create Ref
 -> BUT KEEP IN MIND, IT IS FOR ONLY CLASS COMPONENTS
 -> Ex: FocusInput.js (parent) and Input.js (Child)
 -> In above, we will add ref to 'Input.js'
+
+
+
+Forwarding Refs
+
+->  we can directly access child component's dom elements using forward refs.
+
+ex: ParentForwardRef.js (Parent) and ForwardRef.js (Child)
